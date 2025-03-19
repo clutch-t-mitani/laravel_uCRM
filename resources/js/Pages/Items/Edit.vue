@@ -70,9 +70,9 @@ const updateItem = id => {
                                                 <div class="relative">
                                                     <label for="is_selling" class="leading-7 text-sm text-gray-600 mr-2">ステータス</label>
 
-                                                    <input type="radio" id="selling" name="selling" v-model="form.is_selling" value="1" />
+                                                    <input type="radio" id="selling" name="is_selling" v-model="form.is_selling" value="1" />
                                                     <label class="ml-2 mr-4" for="selling">販売中</label>
-                                                    <input type="radio" id="stop_selling" name="stop_selling" v-model="form.is_selling" value="0" class="ml-2"/>
+                                                    <input type="radio" id="stop_selling" name="is_selling" v-model="form.is_selling" value="0" class="ml-2"/>
                                                     <label class="ml-2 mr-4" for="stop_selling">停止中</label>
                                                     <InputError :message="errors.is_selling" />
                                                 </div>
