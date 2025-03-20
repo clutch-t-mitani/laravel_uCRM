@@ -16,6 +16,7 @@ const form = reactive({
 })
 
 const storeItem = () => {
+    // console.log(form)
     Inertia.post('/items', form)
 }
 </script>
