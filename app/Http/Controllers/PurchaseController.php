@@ -151,7 +151,15 @@ class PurchaseController extends Controller
                 ];
             }
 
+            // こっちだと元データがないと更新できない
+            // foreach ($items as $item_id => $value) {
+            //     $purchase->items()->updateExistingPivot($item_id, [
+            //         'quantity' => $value['quantity']
+            //     ]);
+            // }
+            
             $purchase->items()->sync($items);
+
             DB::commit();
             return to_route('dashboard');
         } catch(\Exception $e) {
